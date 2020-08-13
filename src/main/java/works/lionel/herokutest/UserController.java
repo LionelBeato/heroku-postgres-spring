@@ -16,6 +16,13 @@ public class UserController {
         userRepository.save(user);
     }
 
+    @PostMapping("/forcepost")
+    public void forcePostUser(){
+        userRepository.save(new User("Tom", 21));
+    }
+
+
+
     @GetMapping("/all")
     public List<User> getUsers(){
         return userRepository.findAll();
