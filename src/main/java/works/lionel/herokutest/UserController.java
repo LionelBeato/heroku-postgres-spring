@@ -1,10 +1,7 @@
 package works.lionel.herokutest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,21 +12,21 @@ public class UserController {
     UserRepository userRepository;
 
     @PostMapping
-    public void postUser(User user){
+    public void postUser(@RequestBody User user){
         userRepository.save(user);
     }
 
-    @GetMapping(path="/all")
+    @GetMapping("/all")
     public List<User> getUsers(){
         return userRepository.findAll();
     }
 
-    @GetMapping(path="/{name}")
+    @GetMapping("/{name}")
     public User getUserByName(@PathVariable String name){
         return userRepository.findByName(name);
     }
 
-    @GetMapping(path="/")
+    @GetMapping("/")
     public String getWelcome(){
         return "welcome to my backend";
     }
