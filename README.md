@@ -70,6 +70,11 @@
 16. With every config var created, your application on heroku will reload. Check to see if a CRUD action associated with your app works correctly. If it does, you can check your database by navigating to your ~/h2-console or by simply making a get call. 
      
      
+## Notes
+
+- If anything is confusing or wrong please feel free to let me know or open a pull request. 
+- The source code for the project is in this repo. Don't be afraid to reference it!  
+
 ## References 
 
 - This guide's inspired by the following stackoverflow thread: https://stackoverflow.com/questions/33633243/connecting-to-heroku-postgres-from-spring-boot
