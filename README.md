@@ -47,8 +47,8 @@
 9. Click on your app on your dashboard. YOu should now be in your app's *Overview* section.
 10. Now we need to connect your GitHub repo with your Heroku app. Go to the *Deploy* page for your app on Heroku and scroll down. There should be a section for *Deployment Method*. Click on the GitHub option. It may now prompt you to connect your GitHub. Go ahead and connect it. You should now be able to search for your project's repository. Do so and select it. 
 11. Once that's done you have the option to set up automatic deployments if you'd like. However, you always have the ability to manually deploy from this screen. 
-12. Go back to *Overview*. Under *Installed add-ons*, there should be a section with "Heroku-Postgres". Click on that. 
-13. The link should take you to your database's overview page. Here, click on *Settings* and then "View Credentials". Take note of this information as it will be important later.
+12. Go back to *Overview*. Under *Installed add-ons*, there should be a section with *Heroku-Postgres*. Click on that. 
+13. The link should take you to your database's overview page. Here, click on *Settings* and then *View Credentials*. Take note of this information as it will be important later.
 14. Go back to your Project page and navigate to *Settings*. There should be a section called *Config Vars*. Click on *Reveal Config Vars*.
 15. You should now see a section that will allow you to input config variables. Follow these instructions:
 
@@ -67,7 +67,7 @@
      
      </blockquote>
      
-16. With every config var created, your application on heroku will reload. Check to see if a CRUD action associated with your app works correctly. If it does, you can check your database by navigating to your HEROKU_URL/h2-console or by simply making a get call. 
+16. With every config var created, your application on heroku will reload. Check to see if a CRUD action associated with your app works correctly. If it does, you can check your database by navigating to your ~/h2-console or by simply making a get call. 
      
      
 ## References 
