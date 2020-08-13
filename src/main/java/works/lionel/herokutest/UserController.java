@@ -19,7 +19,7 @@ public class UserController {
         userRepository.save(user);
     }
 
-    @GetMapping
+    @GetMapping(path="/all")
     public List<User> getUsers(){
         return userRepository.findAll();
     }
