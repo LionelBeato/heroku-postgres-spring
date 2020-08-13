@@ -1,5 +1,7 @@
 # heroku-postgres-spring
 
+- Deployed app: https://arcane-savannah-09879.herokuapp.com/
+
 
 ## NOTES
 
