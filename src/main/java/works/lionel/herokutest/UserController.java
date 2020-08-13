@@ -12,24 +12,24 @@ public class UserController {
     UserRepository userRepository;
 
     @PostMapping("/post")
-    public void postUser(@RequestBody User user){
+    public void postUser(@RequestBody EndUser user){
         userRepository.save(user);
     }
 
     @PostMapping("/forcepost")
     public void forcePostUser(){
-        userRepository.save(new User("Tom", 21));
+        userRepository.save(new EndUser("Tom", 21));
     }
 
 
 
     @GetMapping("/all")
-    public List<User> getUsers(){
+    public List<EndUser> getUsers(){
         return userRepository.findAll();
     }
 
     @GetMapping("/{name}")
-    public User getUserByName(@PathVariable String name){
+    public EndUser getUserByName(@PathVariable String name){
         return userRepository.findByName(name);
     }
 

@@ -1,13 +1,13 @@
 package works.lionel.herokutest;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class User {
+public class EndUser {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
     private String name;
     private int age;
@@ -36,19 +36,19 @@ public class User {
         this.age = age;
     }
 
-    public User(String name, int age) {
+    public EndUser(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public User() {
+    public EndUser() {
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        EndUser user = (EndUser) o;
         return id == user.id &&
                 age == user.age &&
                 name.equals(user.name);
