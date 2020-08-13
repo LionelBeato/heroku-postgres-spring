@@ -16,10 +16,10 @@ public class UserController {
         userRepository.save(user);
     }
 
-//    @PostMapping("/forcepost")
-//    public void forcePostUser(){
-//        userRepository.save(new User("Tom", 21));
-//    }
+    @PostMapping("/forcepost")
+    public void forcePostUser(){
+        userRepository.save(new User("Tom", 21));
+    }
 
 
 
