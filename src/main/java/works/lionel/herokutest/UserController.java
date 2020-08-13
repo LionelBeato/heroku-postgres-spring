@@ -29,4 +29,9 @@ public class UserController {
         return userRepository.findByName(name);
     }
 
+    @GetMapping(path="/")
+    public String getWelcome(){
+        return "welcome to my backend";
+    }
+
 }
